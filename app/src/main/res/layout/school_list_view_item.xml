@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="school"
+            type="com.app.schoolapplication.domain.model.School" />
+        <variable
+            name="clickListener"
+            type="com.app.schoolapplication.ui.SchoolClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:elevation="@dimen/card_elevation"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{() -> clickListener.onClick(school)}" >
+
+            <TextView
+                android:id="@+id/stock_ticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_textview_vertical"
+                android:layout_marginHorizontal="@dimen/margin_textview_vertical"
+                android:padding="@dimen/padding_item_view"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{school.schoolName}"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="School name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

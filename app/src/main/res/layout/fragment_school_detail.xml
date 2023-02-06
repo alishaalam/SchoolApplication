@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="school"
+            type="com.app.schoolapplication.domain.model.School" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SchoolDetailFragment">
+
+        <TextView
+            android:id="@+id/school_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_textview_vertical"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@{school.schoolName}"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="?attr/colorPrimary"
+            tools:text="Test School Name" />
+
+        <TextView
+            android:id="@+id/school_dbn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_textview_vertical"
+            android:layout_marginStart="@dimen/margin_textview_horizontal"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/school_name"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorPrimary"
+            android:text="@{@string/school_dbn(school.dbn)}"
+            tools:text="1ZGFV" />
+
+        <TextView
+            android:id="@+id/reading_score_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_textview_vertical"
+            android:layout_marginStart="@dimen/margin_textview_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/school_dbn"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorPrimary"
+            android:text="@{@string/reading_score(school.readingScore)}"
+            tools:text="Reading Score: 123"/>
+
+        <TextView
+            android:id="@+id/writing_score_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_textview_vertical"
+            android:layout_marginStart="@dimen/margin_textview_horizontal"
+            android:text="@{@string/writing_score(school.writingScore)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reading_score_label"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorPrimary"
+            tools:text="Writing Score: 456"
+            />
+
+        <TextView
+            android:id="@+id/math_score_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_textview_vertical"
+            android:layout_marginStart="@dimen/margin_textview_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writing_score_label"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="?attr/colorPrimary"
+            android:text="@{@string/math_score(school.mathScore)}"
+            tools:text="Math Score: 789"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

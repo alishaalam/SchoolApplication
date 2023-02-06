@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">School Application</string>
+    <string name="label_error">Something went wrong, please try again</string>
+    <string name="no_results">No results 😓</string>
+    <string name="no_internet">Please check your internet connection.</string>
+    <string name="school_dbn">School Dbn: %s</string>
+    <string name="reading_score">Reading Score: %d</string>
+    <string name="writing_score">Writing Score: %d</string>
+    <string name="math_score">Math Score: %d</string>
+    <string name="school_menu_sort">Sort</string>
+    <string name="school_menu_sort_name_ascending">Sort by Name Ascending</string>
+    <string name="school_menu_sort_name_descending">Sort by Name Descending</string>
+    <string name="retry_button">Retry</string>
+    <string name="school_list_fragment_label">Schools List</string>
+    <string name="school_detail_fragment_label">School Details</string>
+</resources>
