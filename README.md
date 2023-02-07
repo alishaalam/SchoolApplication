@@ -4,12 +4,22 @@
 This project displays a list of schools. Clicking on any of the schools, opens a detail page about the school. 
 The detail page displays - the name of the school, the dbn code, the SAT reading, writing & math score.
 
+This app demonstrated the use of [Retrofit](https://square.github.io/retrofit/) to make REST requests to the 
+web service, [Moshi](https://github.com/square/moshi) to handle the deserialization of the 
+returned JSON to Kotlin data objects.
+
+The app also leverages [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel),
+[Stateflow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow#stateflow),
+[Data Binding](https://developer.android.com/topic/libraries/data-binding/) with binding 
+adapters, and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) 
+with the SafeArgs plugin for parameter passing between fragments.
+
 The UI of the app has been kept simple, the focus of the work instead has been on architecting the app 
 & following the guidelines which will help the app to scale.
 Broadly speaking, this app can be separated into Data & Presentation/UI Layer.
 
-This app uses a combination of the MVVM, Clean architecture, and Repository pattern to organize its code.
-For data it follows the unidirectional flow, and also embraces the single source of truth principle. 
+The app uses a combination of the MVVM, Clean architecture, and Repository pattern to organize its code.
+For data layer it follows the unidirectional flow, and also embraces the single source of truth principle. 
 Dependency Injection is used to make the app testable and uncoupled from implementation. 
 
 * MVVM separates the UI from the business logic, and Clean architecture takes this separation a step further by dividing the code into modules with specific responsibilities. 
@@ -53,7 +63,9 @@ This app demonstrates the use of:  
 * Kotlin Coroutines for async processing
 
 <h3>MVVM architecture & Repository pattern</h1>
-The repository pattern is a design pattern that isolates the data layer from the rest of the app. 
+
+This app demonstrates the Repository pattern, the recommended best practice for code separation and architecture. Using
+repository pattern the data layer is abstracted from the rest of the app. 
 The data layer refers to the part of your app, separate from the UI, that handles the app's data and business logic, exposing consistent APIs for the rest of your app to access this data. While the UI presents information to the user, 
 the data layer includes things like networking code, Room databases, error handling, and any code that reads or manipulates data.
 A repository can resolve conflicts between data sources (such as persistent models, web services, and caches) and centralize changes to this data.
