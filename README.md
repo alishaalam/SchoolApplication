@@ -10,8 +10,7 @@ returned JSON to Kotlin data objects.
 
 The app also leverages [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel),
 [Stateflow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow#stateflow),
-[Data Binding](https://developer.android.com/topic/libraries/data-binding/) with binding 
-adapters, and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) 
+[Data Binding](https://developer.android.com/topic/libraries/data-binding/) and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) 
 with the SafeArgs plugin for parameter passing between fragments.
 
 The UI of the app has been kept simple, the focus of the work instead has been on architecting the app 
